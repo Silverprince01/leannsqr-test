@@ -1,0 +1,114 @@
+.sideBar {
+  padding: 20px 0px;
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+.logo{
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    width: 90%;
+    color: #213f7d;
+    font-family: 400;
+    font-size: 16px;
+    img{
+      width: 15px;
+      height: 15px;
+    }
+    @media screen and (max-width: 868px) {
+      font-size: 14px;
+      
+    }
+  }
+  .dashBoard {
+    display: flex;
+    align-items: center;
+    padding: 40px 30px;
+    font-size: 16px;
+    p {
+      margin-left: 10px;
+    }
+  }
+  .customers {
+    h3 {
+      font-size: 14px;
+      color: #545f7d;
+      font-weight: 500;
+      padding: 10px 30px;
+    }
+    .customer {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .options {
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        p {
+          margin-left: 10px;
+          font-size: 16px;
+          color: #213f7d;
+        }
+      }
+    }
+    .border {
+      border-left: 3px solid #39cdcc;
+      background-color: #deeeee;
+    }
+  }
+  .business {
+    h3 {
+      font-size: 14px;
+      color: #545f7d;
+      font-weight: 500;
+      padding: 10px 30px;
+    }
+    .busines {
+      height: 40px;
+      .options {
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        p {
+          margin-left: 10px;
+          font-size: 16px;
+          color: #213f7d;
+        }
+      }
+    }
+    .border {
+      border-left: 1px solid red;
+    }
+  }
+  .settings {
+    h3 {
+      font-size: 14px;
+      color: #545f7d;
+      font-weight: 500;
+      padding: 10px 30px;
+    }
+    .setting {
+      height: 40px;
+      .options {
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        p {
+          margin-left: 10px;
+          font-size: 16px;
+          color: #213f7d;
+        }
+      }
+    }
+    // .border {
+    //   border-left: 1px solid red;
+    // }
+  }
+}

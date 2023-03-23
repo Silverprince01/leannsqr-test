@@ -1,0 +1,106 @@
+.header {
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  // left: 0;
+  z-index: 2;
+  //   border-bottom: 2px solid red;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  .heads {
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 52%;
+      @media screen and (max-width: 868px) {
+        width: 100%;
+      }
+      .logo {
+        width: 20%;
+      }
+      .searchBar {
+        display: flex;
+        width: 54%;
+        height: 40px;
+        @media screen and (max-width: 768px) {
+          width: 70%;
+        }
+        @media screen and (max-width: 868px) {
+          width: 90%;
+        }
+        input {
+          width: 80%;
+          border-radius: 8px 0px 0 8px;
+          padding: 0 20px;
+          border: #213f7d 1px solid;
+          ::placeholder {
+            color: #545f7d;
+            font-size: 14px;
+            font-family: "Work Sans", sans-serif;
+          }
+        }
+        .search {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #39cdcc;
+          width: 20%;
+          border-radius: 0 8px 8px 0;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: space-between;
+      width: 48%;
+      .userRight {
+        width: 60%;
+        .users {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          @media screen and (max-width: 648px) {
+            display: none;
+          }
+          p {
+            color: #213f7d;
+          }
+          .docs {
+            text-decoration: underline;
+            cursor: pointer;
+            @media screen and (max-width: 868px) {
+              display: none;
+            }
+          }
+          .notification {
+            width: 26px;
+            @media screen and (max-width: 868px) {
+              display: none;
+            }
+            height: 26px;
+          }
+          .user {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            .userImg {
+              width: 48px;
+              height: 60px;
+              border-radius: 100%;
+            }
+            p {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

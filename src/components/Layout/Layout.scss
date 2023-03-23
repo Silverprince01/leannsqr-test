@@ -1,0 +1,22 @@
+.layout {
+  .children {
+    display: flex;
+    justify-content: space-between;
+    .side {
+      width: 20%;
+      @media screen and (max-width: 1157px) {
+        width: 0;
+      }
+      @media screen and (max-width: 655px) {
+        width: 0;
+      }
+    }
+    .child {
+      width: 100%;
+      height: max-content;
+      @media screen and (max-width: 1152px) {
+        width: 100%;
+      }
+    }
+  }
+}
