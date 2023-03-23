@@ -1,20 +1,17 @@
 import { useState, useEffect, useContext } from "react";
 import { ValueContext } from "../../../components/context";
-import { Avatar, Back } from "../../../assets";
+import { Back } from "../../../assets";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
 import Loader from "../../../components/Loader";
 import "./UserDetails.scss";
-// interface User {
-//   profile: any;
-//   firstName: any;
-// }
+
 export const UserDetailSection: React.FC = () => {
   let [user, setUser] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   const { value } = useContext(ValueContext);
-  const [val, setVal] = value
+  const [val, ] = value
   const [active, setActive] = useState(0);
   const information: { id: number; title: string }[] = [
     { id: 0, title: "General Details" },
@@ -24,16 +21,7 @@ export const UserDetailSection: React.FC = () => {
     { id: 4, title: "Savings" },
     { id: 5, title: "App and System" },
   ];
-  // const teacher: any = {
-  //   name: "Brown",
-  //   address: {
-  //     area: {
-  //       street: "oxford university road",
-  //     },
-  //     city: "London",
-  //     country: "England",
-  //   },
-  // };
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -75,7 +63,6 @@ export const UserDetailSection: React.FC = () => {
     phoneNumber: phone,
     gender: gend,
   } = user.guarantor ?? {};
-  // console.log(nam);
 
   console.log(user);
   console.log(monthlyIncome);

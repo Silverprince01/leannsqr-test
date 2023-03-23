@@ -1,11 +1,8 @@
-import { useState, useEffect,useContext } from "react";
 import { Link } from "react-router-dom";
 import { View, DeleteUser, User } from "../../assets";
 import "./Details.scss";
-import { ValueContext } from "../context";
 
 export const Detail = () => {
-  const {value} = useContext(ValueContext)
   return (
     <div className="details">
       <div className="detail">

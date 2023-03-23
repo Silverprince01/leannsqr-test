@@ -1,11 +1,7 @@
-import React, { useEffect, useState, useContext } from "react";
-
+import  {  useState } from "react";
 import { DesktopTable } from "./component/DeskTopTable";
 import { MobileTable } from "./component/MobileTable";
-import { ValueContext } from "../context";
 import { Filters } from "../Filter/Filters";
-import { Detail } from "../Details/Detail";
-import Loader from "../Loader";
 import useWindowSize from "../../hook/useWindowSize";
 import "./UserList.scss";
 

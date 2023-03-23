@@ -1,17 +1,13 @@
-import { useState, useContext, createContext } from "react";
+import { useState, } from "react";
 import { Routes, Route } from "react-router-dom";
 import { SigninPage } from "./pages/Signin/Signin";
 import { LandingPage } from "./pages/LandingPage";
 import { UserDetail } from "./pages/UserDetail";
 import { ValueContext } from "./components/context";
-// import { Context } from "context";
+
 
 import "./App.scss";
 
-// type Id = {
-//   id: any;
-// };
-// export const UserContext = createContext<Id>(8);
 function App() {
   type ValueContextType = {
     value: number;

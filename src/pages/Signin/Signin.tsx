@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-// import {Signin} from
 import { Signin, Logo } from "../../assets/index";
 import "./Signin.scss";
 export const SigninPage = () => {

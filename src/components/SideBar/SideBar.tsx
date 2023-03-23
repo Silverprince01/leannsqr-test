@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Logo } from "../../assets/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-// import {  useLocation } from "react-router-dom";
 import useWindowSize from "../../hook/useWindowSize";
 
 import {
@@ -67,7 +65,6 @@ export const SideBar = ({ nav, setNav }: Props) => {
 
   return (
     <div
-      // ${nav ? "mobile" : ""}
       style={
         nav
           ? {

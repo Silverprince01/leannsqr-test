@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { ValueContext } from "../../context";
 import { Detail } from "../../Details/Detail";
-import { Filter, More } from "../../../assets";
+import { More } from "../../../assets";
 
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -106,8 +106,7 @@ export const MobileTable = ({ userData, showFilter }: Props) => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
   // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - userData.length) : 0;
+  
 
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,

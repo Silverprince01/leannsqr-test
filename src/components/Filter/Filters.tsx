@@ -6,11 +6,10 @@ type Props = {
 };
 
 export const Filters = ({ userData }: Props) => {
-  const { name, email, organisation, phone } = useContext(ValueContext);
-  const [org, setOrg] = organisation;
-  const [nam, setNam] = name;
-  const [mail, setMail] = email;
-  const [phon, setPhone] = phone;
+  const { name, email, phone } = useContext(ValueContext);
+  const [ setNam] = name;
+  const [ setMail] = email;
+  const [ setPhone] = phone;
   return (
     <form action="">
       <div className="filters">
@@ -23,7 +22,7 @@ export const Filters = ({ userData }: Props) => {
                 <option
                   key={org.id}
                   value={org.orgName.toUpperCase()}
-                  // onClick={() => setOrg(org.orgName)}
+          
                 >
                   {org.orgName.toUpperCase()}
                 </option>
