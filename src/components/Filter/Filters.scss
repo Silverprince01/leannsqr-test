@@ -1,0 +1,52 @@
+.filters {
+  background-color: white;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 5px;
+  //   height: 600px;
+  width: 270px;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  position: absolute;
+  top: 17%;
+  z-index: 10;
+  @media screen and (max-width: 768px) {
+    left: 20%;
+    width: 400px;
+  }
+  //   height: ;
+
+  .filter {
+    padding: 20px;
+
+    .subject {
+      width: 100%;
+      padding: 15px 0;
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #213f7d;
+        border-radius: 8px;
+        option {
+          font-size: 14px;
+          color: #545f7d;
+          
+        }
+      }
+      .topic {
+        font-size: 14px;
+        color: #545f7d;
+        font-weight: 500;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #213f7d;
+        border-radius: 8px;
+        font-size: 14px;
+        &::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+    }
+  }
+}
