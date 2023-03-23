@@ -9,10 +9,10 @@ export const Landing = () => {
   const [loading, setLoading] = useState(false);
   const { name,email,organisation,phone } = useContext(ValueContext);
   
-  const [org, setOrg] = organisation;
-  const [nam, setName] = name;
-  const [mail, setMail] = email;
-  const [phon, setPhone] = phone;
+  const [org] = organisation;
+  const [nam] = name;
+  const [mail ] = email;
+  const [phon] = phone;
 
   useEffect(() => {
     const fetchData = async () => {
