@@ -108,7 +108,7 @@ export const DesktopTable = ({ userData, showFilter }: Props) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const { value } = useContext(ValueContext);
-  const [val, setValue] = value
+  const [val, setValue] = value;
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -145,24 +145,54 @@ export const DesktopTable = ({ userData, showFilter }: Props) => {
               style={{ width: 160 }}
               onClick={() => showFilter((prev: boolean) => !prev)}
             >
-              User Name <span>  <img src={Filter} alt="" /></span> 
+              User Name
+              <span>
+                <img src={Filter} alt="" />
+              </span>
             </TableCell>
-            <TableCell align="left" style={{ width: 160 }}>
-              Email <span>  <img src={Filter} alt="" /></span> 
+            <TableCell
+              align="left"
+              style={{ width: 160 }}
+              onClick={() => showFilter((prev: boolean) => !prev)}
+            >
+              Email
+              <span>
+                <img src={Filter} alt="" />
+              </span>
             </TableCell>
-            <TableCell align="left" style={{ width: 160 }}>
-              Phone Number <span>  <img src={Filter} alt="" /></span> 
+            <TableCell
+              align="left"
+              style={{ width: 160 }}
+              onClick={() => showFilter((prev: boolean) => !prev)}
+            >
+              Phone Number
+              <span>
+                <img src={Filter} alt="" />
+              </span>
             </TableCell>
-            <TableCell align="left" style={{ width: 160 }}>
-              Date Joined <span>  <img src={Filter} alt="" /></span> 
+            <TableCell
+              align="left"
+              style={{ width: 160 }}
+              onClick={() => showFilter((prev: boolean) => !prev)}
+            >
+              Date Joined
+              <span>
+                <img src={Filter} alt="" />
+              </span>
             </TableCell>
-            <TableCell align="left" style={{ width: 160 }}>
-              Status <span>  <img src={Filter} alt="" /></span> 
+            <TableCell
+              align="left"
+              style={{ width: 160 }}
+              onClick={() => showFilter((prev: boolean) => !prev)}
+            >
+              Status
+              <span>
+                <img src={Filter} alt="" />
+              </span>
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody onClick={() => showFilter(false)}>
-        
           {(rowsPerPage > 0
             ? userData.slice(
                 page * rowsPerPage,
@@ -175,7 +205,7 @@ export const DesktopTable = ({ userData, showFilter }: Props) => {
                 {row.orgName}
               </TableCell>
               <TableCell style={{ width: 160 }} align="left">
-                {row.userName} 
+                {row.userName}
               </TableCell>
               <TableCell style={{ width: 160 }} align="left">
                 {row.email}
