@@ -25,7 +25,6 @@
         option {
           font-size: 14px;
           color: #545f7d;
-          
         }
       }
       .topic {
@@ -43,6 +42,26 @@
         ::-webkit-outer-spin-button {
           -webkit-appearance: none;
         }
+      }
+    }
+    .submit {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      button {
+        width: 45%;
+        background-color: transparent;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .reset {
+        color: #545f7d;
+        border: solid 1px #545f7d;
+      }
+      .filter {
+        background-color: #39cdcc;
+        color: white;
       }
     }
   }

@@ -3,13 +3,14 @@ import { ValueContext } from "../context";
 import "./Filters.scss";
 type Props = {
   userData?: any;
+  showFilter: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export const Filters = ({ userData }: Props) => {
+export const Filters = ({ userData, showFilter }: Props) => {
   const { name, email, phone } = useContext(ValueContext);
-  const [ setNam] = name;
-  const [ setMail] = email;
-  const [ setPhone] = phone;
+  const [nam,setNam] = name;
+  const [mail,setMail] = email;
+  const [phon,setPhone] = phone;
   return (
     <form action="">
       <div className="filters">
@@ -19,11 +20,7 @@ export const Filters = ({ userData }: Props) => {
             <select name="" id="">
               <option value="">Select</option>
               {userData.map((org: any) => (
-                <option
-                  key={org.id}
-                  value={org.orgName.toUpperCase()}
-          
-                >
+                <option key={org.id} value={org.orgName.toUpperCase()}>
                   {org.orgName.toUpperCase()}
                 </option>
               ))}
@@ -68,6 +65,16 @@ export const Filters = ({ userData }: Props) => {
               <option value="">BLACKLISTED</option>
               <option value="">PENDING</option>
             </select>
+          </div>
+          <div className="submit">
+            <button className="reset">Reset</button>
+            <button
+              type="submit"
+              className="filter"
+              onClick={() => showFilter((prev:boolean) => !prev)}
+            >
+              Filter
+            </button>
           </div>
         </div>
       </div>
