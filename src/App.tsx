@@ -25,7 +25,7 @@ function App() {
   const [nam, setNam] = useState<ValueContextType | any>("");
   const [mail, setMail] = useState<ValueContextType | any>("");
   const [org, setOrg] = useState<ValueContextType | any>("");
-  const [phone, setPhone] = useState<ValueContextType | any>("");
+  const [phon, setPhone] = useState<ValueContextType | any>("");
   return (
     <div className="App">
       <ValueContext.Provider
@@ -34,7 +34,7 @@ function App() {
           name: [nam, setNam],
           email: [mail, setMail],
           organisation: [org, setOrg],
-          phone: [phone, setPhone],
+          phone: [phon, setPhone],
         }}
       >
         <Routes>

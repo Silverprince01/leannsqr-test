@@ -7,11 +7,12 @@ import "./Landing.scss";
 export const Landing = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const { name,email,organisation,phone } = useContext(ValueContext);
-  
+  const { name, email, organisation, phone, value } = useContext(ValueContext);
+
+  const [val, setValue] = value;
   const [org] = organisation;
   const [nam] = name;
-  const [mail ] = email;
+  const [mail] = email;
   const [phon] = phone;
 
   useEffect(() => {
@@ -46,7 +47,11 @@ export const Landing = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div>
+        <div
+          onClick={() => {
+            console.log(val);
+          }}
+        >
           <Users userData={userData} />
           <UserLists userData={userData} />
         </div>

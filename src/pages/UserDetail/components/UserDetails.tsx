@@ -11,7 +11,7 @@ export const UserDetailSection: React.FC = () => {
   let [user, setUser] = useState<any>([]);
   const [loading, setLoading] = useState(false);
   const { value } = useContext(ValueContext);
-  const [val, ] = value
+  const [val, setValue] = value;
   const [active, setActive] = useState(0);
   const information: { id: number; title: string }[] = [
     { id: 0, title: "General Details" },
@@ -21,7 +21,7 @@ export const UserDetailSection: React.FC = () => {
     { id: 4, title: "Savings" },
     { id: 5, title: "App and System" },
   ];
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -40,7 +40,7 @@ export const UserDetailSection: React.FC = () => {
     };
 
     fetchData();
-  }, [value]);
+  }, [val]);
   const { accountBalance, accountNumber, email } = user;
 
   let { firstName, lastName, avatar, bvn, gender, phoneNumber, currency } =
@@ -64,23 +64,19 @@ export const UserDetailSection: React.FC = () => {
     gender: gend,
   } = user.guarantor ?? {};
 
-  console.log(user);
-  console.log(monthlyIncome);
 
   return (
     <div className="userDetail">
       {loading ? (
         <Loader />
       ) : (
-        <div className="">
+        <div className="" onClick={() => setValue(0)}>
           <Link to={"/landingpage"}>
             <div className="back">
               <img src={Back} alt="" />
               <p>Back to Users</p>
             </div>
           </Link>
-          {/* {userDetail.map((user: any) => { */}
-          {/* return (  */}
           <div className="">
             <div className="user">
               <p>User Details</p>
@@ -101,7 +97,7 @@ export const UserDetailSection: React.FC = () => {
 
                   <div className="">
                     <p>
-                      {firstName}  <span>{lastName}</span>
+                      {firstName} <span>{lastName}</span>
                     </p>
                     <p>Lsqkdfjdkfj</p>
                   </div>

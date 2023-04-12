@@ -129,7 +129,7 @@ export const DesktopTable = ({ userData, showFilter }: Props) => {
   };
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} >
       <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
         <TableHead>
           <TableRow>

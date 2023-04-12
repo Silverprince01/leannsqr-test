@@ -20,7 +20,7 @@ export const UserLists = ({userData}:Props) => {
           style={{ padding: "40px 0", position: "relative" }}
           className="table"
         >
-          {filter ? <Filters userData={userData} /> : null}
+          {filter ? <Filters userData={userData} showFilter={showFilter} /> : null}
           {width > 768 ? (
             <DesktopTable userData={userData} showFilter={showFilter} />
           ) : (
